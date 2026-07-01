@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="GurtBase — Self-serve frozen yogurt & açaí bowls in Kyoto. Create your own cup with 30+ toppings near Sanjo Station.">
+  <meta name="description" content="GurtBase — Frozen yogurt & açaí bowls in Kyoto. Fixed-size cups from ¥700 with 30+ toppings, near Sanjo Station.">
   <title>GurtBase | Frozen Yogurt & Açaí Kyoto</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,8 +21,9 @@
       <div class="nav-menu">
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
-          <li><a href="#menu">Menu</a></li>
+          <li><a href="#menu-list">Menu</a></li>
           <li><a href="#visit">Visit</a></li>
+          <li><a href="../booking.html">Reserve</a></li>
         </ul>
         <div class="lang-switch">
           <a href="../cn/">中文</a>
@@ -34,12 +35,12 @@
   </header>
 
   <main>
-    <section class="hero">
+    <section class="hero" style="background: url(../picture/Head/Fruits.png) center/cover no-repeat;">
       <div class="hero-grid-overlay"></div>
       <div class="hero-content container">
         <p class="hero-tag">Kyoto, Japan</p>
         <h1>Create your own cup.<br>Frozen yogurt &amp; açaí in Kyoto.</h1>
-        <p class="hero-sub">Self-serve Greek yogurt, frozen yogurt &amp; açaí bowls with 30+ toppings. Pay by weight — only pay for what you pour.</p>
+        <p class="hero-sub">Greek yogurt, frozen yogurt &amp; açaí bowls with 30+ toppings. Fixed-size cups from ¥700 — pick your size and enjoy your favorite set.</p>
         <div class="hero-quick-nav">
           <a href="#about" class="hero-nav-pill">About</a>
           <a href="#menu" class="hero-nav-pill">How It Works</a>
@@ -57,7 +58,7 @@
         <div class="intro-text">
           <p class="section-label">About</p>
           <h2>Your bowl, your way —<br>right in the heart of Kyoto</h2>
-          <p>GurtBase is a self-serve frozen yogurt and açaí shop in Kyoto's Sanjo district. Choose from 4 cup sizes and over 30 toppings to build your perfect bowl — fresh fruit, granola, nuts, sauces, and more. Pay by weight at just ¥4/g, so you control exactly what goes in.</p>
+          <p>GurtBase is a frozen yogurt and açaí shop in Kyoto's Sanjo district. Choose from fixed-size cups (100g, 150g, 200g) and over 30 toppings paired into signature sets — fresh fruit, granola, nuts, sauces, and more. Plain Greek yogurt starts at just ¥700, so you can enjoy your bowl affordably.</p>
           <p class="intro-jp">あなただけのオリジナルカップを作りましょう</p>
         </div>
         <div class="intro-features">
@@ -70,8 +71,8 @@
             <span class="feature-label">Cup sizes — from a quick snack to a full bowl</span>
           </div>
           <div class="feature">
-            <span class="feature-num">¥4/g</span>
-            <span class="feature-label">Pay by weight — only pay for what you pour</span>
+            <span class="feature-num">¥700+</span>
+            <span class="feature-label">Starting price — plain Greek 100g from ¥700</span>
           </div>
         </div>
       </div>
@@ -82,25 +83,255 @@
         <header class="section-header">
           <p class="section-label">How It Works</p>
           <h2>Build Your Perfect Cup</h2>
-          <p class="section-sub">Pick a base, load up on toppings, weigh &amp; pay. It's that simple.</p>
+          <p class="section-sub">Pick a base, pick your size, and enjoy your favorite set. It's that simple.</p>
         </header>
         <div class="service-grid">
           <article class="concept-card">
-            <div class="concept-icon">🫙</div>
             <h3>Pick Your Base</h3>
             <p>Start with frozen yogurt, Greek yogurt, or açaí — each made fresh in-house for a creamy, delicious foundation.</p>
           </article>
           <article class="concept-card featured">
             <span class="badge">30+ choices</span>
-            <div class="concept-icon">🍓</div>
             <h3>Load on Toppings</h3>
             <p>Fresh fruit, crunchy granola, nuts, chocolate, sauces, mochi, and more. Mix and match to create your perfect combination.</p>
           </article>
           <article class="concept-card">
-            <div class="concept-icon">⚖️</div>
-            <h3>Weigh &amp; Pay</h3>
-            <p>Put your cup on the scale — you pay by weight at ¥4/g. Only pay for what you actually pour. Simple and fair.</p>
+            <h3>Pick Your Size</h3>
+            <p>Choose from 100g, 150g, or 200g fixed-size cups, or go for one of our signature ready-made sets with hand-picked toppings.</p>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="services section" id="menu-list">
+      <div class="container">
+        <header class="section-header">
+          <p class="section-label">Menu</p>
+          <h2>What We Serve</h2>
+          <p class="section-sub">Available for dine-in, takeout, and Uber Eats delivery.</p>
+        </header>
+
+        <!-- Greek Yogurt -->
+        <div class="menu-category">
+          <h3 class="menu-cat-title">Greek Yogurt <small>グリークヨーグルト</small></h3>
+          <div class="service-grid">
+            <article class="concept-card">
+              <img class="concept-img" src="../picture/グリークヨーグルト/プレーングリークヨーグルト 100g.png" alt="Plain Greek Yogurt 100g" loading="lazy">
+              <h3>Plain Greek Yogurt<small>プレーン — 100g</small></h3>
+              <p class="menu-price">¥700</p>
+              <a href="../booking.html?type=Pre-order%20Pickup" class="btn-booking">Pre-order via WhatsApp</a>
+            </article>
+            <article class="concept-card">
+              <img class="concept-img" src="../picture/グリークヨーグルト/プレーングリークヨーグルト150g.png" alt="Plain Greek Yogurt 150g" loading="lazy">
+              <h3>Plain Greek Yogurt<small>プレーン — 150g</small></h3>
+              <p class="menu-price">¥1,000</p>
+              <a href="../booking.html?type=Pre-order%20Pickup" class="btn-booking">Pre-order via WhatsApp</a>
+            </article>
+            <article class="concept-card">
+              <img class="concept-img" src="../picture/グリークヨーグルト/ハニーグリークヨーグルト 100g.png" alt="Honey Greek Yogurt 100g" loading="lazy">
+              <h3>Honey Greek Yogurt<small>ハニー — 100g</small></h3>
+              <p class="menu-price">¥800</p>
+              <a href="../booking.html?type=Pre-order%20Pickup" class="btn-booking">Pre-order via WhatsApp</a>
+            </article>
+            <article class="concept-card">
+              <img class="concept-img" src="../picture/グリークヨーグルト/ハニーグリークヨーグルト 150g.png" alt="Honey Greek Yogurt 150g" loading="lazy">
+              <h3>Honey Greek Yogurt<small>ハニー — 150g</small></h3>
+              <p class="menu-price">¥1,100</p>
+              <a href="../booking.html?type=Pre-order%20Pickup" class="btn-booking">Pre-order via WhatsApp</a>
+            </article>
+            <article class="concept-card">
+              <img class="concept-img" src="../picture/グリークヨーグルト/オレオグリークヨーグルト 100g.png" alt="Oreo Greek Yogurt 100g" loading="lazy">
+              <h3>Oreo Greek Yogurt<small>オレオ — 100g</small></h3>
+              <p class="menu-price">¥800</p>
+              <a href="../booking.html?type=Pre-order%20Pickup" class="btn-booking">Pre-order via WhatsApp</a>
+            </article>
+            <article class="concept-card">
+              <img class="concept-img" src="../picture/グリークヨーグルト/オレオグリークヨーグルト150g.png" alt="Oreo Greek Yogurt 150g" loading="lazy">
+              <h3>Oreo Greek Yogurt<small>オレオ — 150g</small></h3>
+              <p class="menu-price">¥1,100</p>
+              <a href="../booking.html?type=Pre-order%20Pickup" class="btn-booking">Pre-order via WhatsApp</a>
+            </article>
+            <article class="concept-card">
+              <img class="concept-img" src="../picture/グリークヨーグルト/ロータスグリークヨーグルト 100g.png" alt="Lotus Greek Yogurt 100g" loading="lazy">
+              <h3>Lotus Greek Yogurt<small>ロータス — 100g</small></h3>
+              <p class="menu-price">¥800</p>
+              <a href="../booking.html?type=Pre-order%20Pickup" class="btn-booking">Pre-order via WhatsApp</a>
+            </article>
+            <article class="concept-card">
+              <img class="concept-img" src="../picture/グリークヨーグルト/ロータスグリークヨーグルト150g.png" alt="Lotus Greek Yogurt 150g" loading="lazy">
+              <h3>Lotus Greek Yogurt<small>ロータス — 150g</small></h3>
+              <p class="menu-price">¥1,100</p>
+              <a href="../booking.html?type=Pre-order%20Pickup" class="btn-booking">Pre-order via WhatsApp</a>
+            </article>
+            <article class="concept-card featured">
+              <span class="badge">Special</span>
+              <img class="concept-img" src="../picture/グリークヨーグルト/チョコ（いちご、くるみ、チョコブラウニー、オレオ、チョコチップ、チョコクランチ、チョコソース）.png" alt="Chocolate Special" loading="lazy">
+              <h3>Chocolate Special<small>チョコスペシャル</small></h3>
+              <p class="menu-price">¥1,900</p>
+              <a href="../booking.html?type=Pre-order%20Pickup" class="btn-booking">Pre-order via WhatsApp</a>
+            </article>
+            <article class="concept-card">
+              <img class="concept-img" src="../picture/グリークヨーグルト/定番（いちご、ブルーベリー、バナナ、コムハニ、オートミール、くるみ、はちみつ、クランキーナッツ）.png" alt="Classic" loading="lazy">
+              <h3>Classic<small>定番</small></h3>
+              <p class="menu-price">¥1,900</p>
+              <a href="../booking.html?type=Pre-order%20Pickup" class="btn-booking">Pre-order via WhatsApp</a>
+            </article>
+            <article class="concept-card featured">
+              <span class="badge">Special</span>
+              <img class="concept-img" src="../picture/グリークヨーグルト/フルーツスペシャル（いちご、ブルーベリー、バナナ、季節のフルーツ2種、コムハニー、クランキーナッツ、はちみつ）.png" alt="Fruit Special" loading="lazy">
+              <h3>Fruit Special<small>フルーツスペシャル</small></h3>
+              <p class="menu-price">¥2,200</p>
+              <a href="../booking.html?type=Pre-order%20Pickup" class="btn-booking">Pre-order via WhatsApp</a>
+            </article>
+          </div>
+        </div>
+
+        <!-- Frozen Yogurt Ice -->
+        <div class="menu-category">
+          <h3 class="menu-cat-title">Frozen Yogurt Ice <small>フローズンヨーグルトアイス</small></h3>
+          <div class="service-grid">
+            <article class="concept-card">
+              <img class="concept-img" src="../picture/フローズンヨーグルトアイス/フローズンヨーグルトアイス　200g.png" alt="Frozen Yogurt Ice 200g" loading="lazy">
+              <h3>Frozen Yogurt Ice<small>フローズンヨーグルトアイス — 200g</small></h3>
+              <p class="menu-price">¥1,300</p>
+              <a href="../booking.html?type=Pre-order%20Pickup" class="btn-booking">Pre-order via WhatsApp</a>
+            </article>
+            <article class="concept-card">
+              <img class="concept-img" src="../picture/フローズンヨーグルトアイス/フローズンヨーグルトアイス＆グリークヨーグルト　200g.png" alt="Frozen Yogurt Ice & Greek Yogurt 200g" loading="lazy">
+              <h3>Frozen Yogurt Ice &amp; Greek<small>フローズンヨーグルトアイス＆グリークヨーグルト — 200g</small></h3>
+              <p class="menu-price">¥1,300</p>
+              <a href="../booking.html?type=Pre-order%20Pickup" class="btn-booking">Pre-order via WhatsApp</a>
+            </article>
+            <article class="concept-card featured">
+              <span class="badge">Popular</span>
+              <img class="concept-img" src="../picture/フローズンヨーグルトアイス/【ベーシック】フローズンヨーグルトアイス　 (いちご、バナナ、チーズケーキ、マコロンクランチ、チョコシェル).png" alt="Basic Frozen Yogurt Ice" loading="lazy">
+              <h3>Basic Frozen Yogurt Ice<small>【ベーシック】フローズンヨーグルトアイス</small></h3>
+              <p class="menu-price">¥2,100</p>
+              <a href="../booking.html?type=Pre-order%20Pickup" class="btn-booking">Pre-order via WhatsApp</a>
+            </article>
+            <article class="concept-card">
+              <img class="concept-img" src="../picture/フローズンヨーグルトアイス/【ベーシック】　フローズンヨーグルトアイス＆グリークヨーグルト　(いちご、バナナ、チーズケーキ、マコロンクランチ、チョコシェル).png" alt="Basic Frozen Yogurt Ice & Greek" loading="lazy">
+              <h3>Basic Frozen Yogurt Ice &amp; Greek<small>【ベーシック】フローズンヨーグルトアイス＆グリークヨーグルト</small></h3>
+              <p class="menu-price">¥2,100</p>
+              <a href="../booking.html?type=Pre-order%20Pickup" class="btn-booking">Pre-order via WhatsApp</a>
+            </article>
+          </div>
+        </div>
+
+        <!-- Frozen Açaí -->
+        <div class="menu-category">
+          <h3 class="menu-cat-title">Frozen Açaí <small>フローズンアサイー</small></h3>
+          <div class="service-grid">
+            <article class="concept-card">
+              <img class="concept-img" src="../picture/フローズンアサイー/GurtBaseオリジナル　フローズンアサイー　200g.png" alt="Frozen Açaí 200g" loading="lazy">
+              <h3>Frozen Açaí<small>GurtBaseオリジナル — 200g</small></h3>
+              <p class="menu-price">¥1,300</p>
+              <a href="../booking.html?type=Pre-order%20Pickup" class="btn-booking">Pre-order via WhatsApp</a>
+            </article>
+            <article class="concept-card">
+              <img class="concept-img" src="../picture/フローズンアサイー/GurtBaseオリジナル　フローズンアサイー＆グリークヨーグルト　200g.png" alt="Frozen Açaí & Greek 200g" loading="lazy">
+              <h3>Frozen Açaí &amp; Greek<small>GurtBaseオリジナル アサイー＆グリークヨーグルト — 200g</small></h3>
+              <p class="menu-price">¥1,300</p>
+              <a href="../booking.html?type=Pre-order%20Pickup" class="btn-booking">Pre-order via WhatsApp</a>
+            </article>
+            <article class="concept-card featured">
+              <span class="badge">Popular</span>
+              <img class="concept-img" src="../picture/フローズンアサイー/【ベーシック】GurtBaseオリジナル　フローズンアサイー　(いちご、ブルーベリー、バナナ、グラノーラ、ココナッツファイン、はちみつ).png" alt="Basic Frozen Açaí" loading="lazy">
+              <h3>Basic Frozen Açaí<small>【ベーシック】フローズンアサイー</small></h3>
+              <p class="menu-price">¥2,000</p>
+              <a href="../booking.html?type=Pre-order%20Pickup" class="btn-booking">Pre-order via WhatsApp</a>
+            </article>
+            <article class="concept-card">
+              <img class="concept-img" src="../picture/フローズンアサイー/【ベーシック】GurtBaseオリジナル　フローズンアサイー＆グリークヨーグルト　(いちご、ブルーベリー、バナナ、グラノーラ、ココナッツファイン、はちみつ).png" alt="Basic Frozen Açaí & Greek" loading="lazy">
+              <h3>Basic Frozen Açaí &amp; Greek<small>【ベーシック】フローズンアサイー＆グリークヨーグルト</small></h3>
+              <p class="menu-price">¥2,000</p>
+              <a href="../booking.html?type=Pre-order%20Pickup" class="btn-booking">Pre-order via WhatsApp</a>
+            </article>
+          </div>
+        </div>
+
+        <!-- Vanilla Ice Cream -->
+        <div class="menu-category">
+          <h3 class="menu-cat-title">Vanilla Ice Cream <small>バニラアイス</small></h3>
+          <div class="service-grid">
+            <article class="concept-card">
+              <img class="concept-img" src="../picture/バニラアイス/バニラアイス　200g.png" alt="Vanilla Ice 200g" loading="lazy">
+              <h3>Vanilla Ice Cream<small>バニラアイス — 200g</small></h3>
+              <p class="menu-price">¥1,300</p>
+              <a href="../booking.html?type=Pre-order%20Pickup" class="btn-booking">Pre-order via WhatsApp</a>
+            </article>
+            <article class="concept-card">
+              <img class="concept-img" src="../picture/バニラアイス/バニラアイス＆グリークヨーグルト　200g.png" alt="Vanilla Ice & Greek 200g" loading="lazy">
+              <h3>Vanilla Ice &amp; Greek<small>バニラアイス＆グリークヨーグルト — 200g</small></h3>
+              <p class="menu-price">¥1,300</p>
+              <a href="../booking.html?type=Pre-order%20Pickup" class="btn-booking">Pre-order via WhatsApp</a>
+            </article>
+          </div>
+        </div>
+
+        <!-- Salad -->
+        <div class="menu-category">
+          <h3 class="menu-cat-title">Salad Bowl <small>サラダ</small></h3>
+          <div class="service-grid">
+            <article class="concept-card">
+              <img class="concept-img" src="../picture/サラダ/グリークヨーグルトサラダボウル.png" alt="Greek Yogurt Salad Bowl" loading="lazy">
+              <h3>Greek Yogurt Salad Bowl<small>グリークヨーグルトサラダボウル</small></h3>
+              <p class="menu-price">¥1,300</p>
+              <a href="../booking.html?type=Pre-order%20Pickup" class="btn-booking">Pre-order via WhatsApp</a>
+            </article>
+          </div>
+        </div>
+
+        <!-- Delivery -->
+        <div class="menu-category">
+          <h3 class="menu-cat-title">Order Delivery <small>デリバリー</small></h3>
+          <div class="service-grid">
+            <article class="concept-card">
+              <h3>Uber Eats / 出前館<small>Delivery</small></h3>
+              <p>Prefer staying in? We're on Uber Eats &amp; Demae-can. Or pre-order for pickup via WhatsApp.</p>
+              <a href="../booking.html?type=Pre-order%20Pickup" class="btn-booking">Order via WhatsApp</a>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="env-carousel-section" aria-label="Gallery">
+      <div class="container">
+        <header class="section-header">
+          <p class="section-label">Gallery</p>
+          <h2>Our Shop &amp; Bowls</h2>
+          <p class="section-sub">Take a look inside GurtBase — from our toppings bar to your perfect cup.</p>
+        </header>
+        <div class="env-carousel" id="envCarousel">
+          <div class="env-carousel-track" id="envTrack">
+            <div class="env-carousel-slide">
+              <img src="../assets/images/gallery-01.webp" alt="Dispensing frozen yogurt from the machine" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg, #ede9fe, #d1fae5)';this.style.display='none';">
+            </div>
+            <div class="env-carousel-slide">
+              <img src="../assets/images/gallery-02.webp" alt="GurtBase signature acai bowl with toppings" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg, #d1fae5, #fef3c7)';this.style.display='none';">
+            </div>
+            <div class="env-carousel-slide">
+              <img src="../assets/images/gallery-03.webp" alt="Fresh toppings — cookies, fruit, mochi" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg, #fce7f3, #ede9fe)';this.style.display='none';">
+            </div>
+            <div class="env-carousel-slide">
+              <img src="../assets/images/gallery-04.webp" alt="Toppings bar with 30+ options" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg, #e0f2fe, #d1fae5)';this.style.display='none';">
+            </div>
+            <div class="env-carousel-slide">
+              <img src="../assets/images/gallery-05.webp" alt="How to enjoy GurtBase — step guide" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg, #fef3c7, #ede9fe)';this.style.display='none';">
+            </div>
+            <div class="env-carousel-slide">
+              <img src="../assets/images/gallery-06.webp" alt="Frozen yogurt machine with menu display" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg, #d1fae5, #e0f2fe)';this.style.display='none';">
+            </div>
+            <div class="env-carousel-slide">
+              <img src="../assets/images/gallery-07.webp" alt="GurtBase store interior" loading="lazy" onerror="this.parentElement.style.background='linear-gradient(135deg, #ede9fe, #fce7f3)';this.style.display='none';">
+            </div>
+          </div>
+        </div>
+        <div class="env-carousel-nav">
+          <button class="env-carousel-btn" id="envPrev" aria-label="Previous slide">&larr;</button>
+          <div class="env-dots" id="envDots"></div>
+          <button class="env-carousel-btn" id="envNext" aria-label="Next slide">&rarr;</button>
         </div>
       </div>
     </section>

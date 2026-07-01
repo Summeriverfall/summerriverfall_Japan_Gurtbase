@@ -47,6 +47,31 @@
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
+  // --- Hero Carousel ---
+  function initHeroCarousel() {
+    var slides = document.querySelectorAll('.hero-slide');
+    var dots = document.querySelectorAll('.hero-dot');
+    if (!slides.length || !dots.length) return;
+    var current = 0;
+    var interval;
+    function goTo(index) {
+      slides[current].classList.remove('active');
+      dots[current].classList.remove('active');
+      current = ((index % slides.length) + slides.length) % slides.length;
+      slides[current].classList.add('active');
+      dots[current].classList.add('active');
+    }
+    function next() { goTo(current + 1); }
+    dots.forEach(function(dot) {
+      dot.addEventListener('click', function() {
+        goTo(parseInt(this.getAttribute('data-index')));
+        clearInterval(interval);
+        interval = setInterval(next, 4000);
+      });
+    });
+    interval = setInterval(next, 4000);
+  }
+
   // --- Environment Carousel ---
   function initEnvCarousel() {
     if (!envTrack || !envDots) return;
@@ -116,6 +141,7 @@
   });
 
   // --- Init ---
+  initHeroCarousel();
   initEnvCarousel();
   initReveal();
 })();
