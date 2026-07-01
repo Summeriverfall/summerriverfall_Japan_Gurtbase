@@ -72,27 +72,46 @@
           </select>
         </div>
 
-        <div class="form-group" id="cupSizeGroup" style="display:none;">
-          <label for="cupSize" class="form-label">Preferred Cup Size</label>
-          <select id="cupSize" name="cupSize" class="form-select">
-            <option value="">Any size</option>
-            <option value="SS (extra small)">SS — Extra Small</option>
-            <option value="S (small)">S — Small</option>
-            <option value="M (medium)">M — Medium</option>
-            <option value="L (large)">L — Large</option>
-          </select>
-        </div>
-
-        <div class="form-group" id="baseGroup" style="display:none;">
-          <label for="base" class="form-label">Preferred Base</label>
-          <select id="base" name="base" class="form-select">
-            <option value="">Any base</option>
-            <option value="Frozen Yogurt">Frozen Yogurt</option>
-            <option value="Greek Yogurt (Plain)">Greek Yogurt (Plain)</option>
-            <option value="Greek Yogurt (Chocolate)">Greek Yogurt (Chocolate)</option>
-            <option value="Greek Yogurt (Honey)">Greek Yogurt (Honey)</option>
-            <option value="Acai">Acai</option>
-            <option value="Mixed / Surprise Me">Mixed / Surprise Me</option>
+        <div class="form-group" id="productGroup" style="display:none;">
+          <label for="product" class="form-label">Product</label>
+          <select id="product" name="product" class="form-select">
+            <option value="">Any / Not decided</option>
+            <optgroup label="Greek Yogurt 100g / グリークヨーグルト 100g">
+              <option value="plain-100g">Plain / プレーン — ¥700</option>
+              <option value="honey-100g">Honey / ハニー — ¥800</option>
+              <option value="oreo-100g">Oreo / オレオ — ¥800</option>
+              <option value="lotus-100g">Lotus / ロータス — ¥800</option>
+            </optgroup>
+            <optgroup label="Greek Yogurt 150g / グリークヨーグルト 150g">
+              <option value="plain-150g">Plain / プレーン — ¥1,000</option>
+              <option value="honey-150g">Honey / ハニー — ¥1,100</option>
+              <option value="oreo-150g">Oreo / オレオ — ¥1,100</option>
+              <option value="lotus-150g">Lotus / ロータス — ¥1,100</option>
+            </optgroup>
+            <optgroup label="Greek Yogurt Signature Sets / スペシャル">
+              <option value="classic">Classic / 定番 — ¥1,900</option>
+              <option value="choco-special">Chocolate Special / チョコスペシャル — ¥1,900</option>
+              <option value="fruit-special">Fruit Special / フルーツスペシャル — ¥2,200</option>
+            </optgroup>
+            <optgroup label="Frozen Yogurt Ice / フローズンヨーグルトアイス">
+              <option value="frozen-yogurt-200g">Frozen Yogurt Ice 200g — ¥1,300</option>
+              <option value="frozen-yogurt-greek-200g">Frozen Yogurt Ice &amp; Greek 200g — ¥1,300</option>
+              <option value="basic-frozen-yogurt">Basic Frozen Yogurt Ice — ¥2,100</option>
+              <option value="basic-frozen-yogurt-greek">Basic Frozen Yogurt Ice &amp; Greek — ¥2,100</option>
+            </optgroup>
+            <optgroup label="Frozen Açaí / フローズンアサイー">
+              <option value="acai-200g">Frozen Açaí 200g — ¥1,300</option>
+              <option value="acai-greek-200g">Frozen Açaí &amp; Greek 200g — ¥1,300</option>
+              <option value="basic-acai">Basic Frozen Açaí — ¥2,000</option>
+              <option value="basic-acai-greek">Basic Frozen Açaí &amp; Greek — ¥2,000</option>
+            </optgroup>
+            <optgroup label="Vanilla Ice Cream / バニラアイス">
+              <option value="vanilla-200g">Vanilla Ice Cream 200g — ¥1,300</option>
+              <option value="vanilla-greek-200g">Vanilla Ice Cream &amp; Greek 200g — ¥1,300</option>
+            </optgroup>
+            <optgroup label="Salad / サラダ">
+              <option value="salad-bowl">Greek Yogurt Salad Bowl — ¥1,300</option>
+            </optgroup>
           </select>
         </div>
 
@@ -117,8 +136,7 @@
     // Dynamic field visibility based on inquiry type
     document.getElementById('inquiryType').addEventListener('change', function() {
       var type = this.value;
-      document.getElementById('cupSizeGroup').style.display = (type === 'Pre-order Pickup') ? 'block' : 'none';
-      document.getElementById('baseGroup').style.display = (type === 'Pre-order Pickup') ? 'block' : 'none';
+      document.getElementById('productGroup').style.display = (type === 'Pre-order Pickup') ? 'block' : 'none';
       document.getElementById('guestsGroup').style.display = (type === 'General Inquiry') ? 'none' : 'block';
     });
 
@@ -126,7 +144,7 @@
     var dateInput = document.getElementById('date');
     dateInput.setAttribute('min', new Date().toISOString().split('T')[0]);
 
-    // Pre-select inquiry type from URL parameter
+    // Pre-select inquiry type and product from URL parameters
     (function() {
       var params = new URLSearchParams(window.location.search);
       var type = params.get('type');
@@ -136,6 +154,16 @@
           if (sel.options[i].value === type) {
             sel.options[i].selected = true;
             sel.dispatchEvent(new Event('change'));
+            break;
+          }
+        }
+      }
+      var product = params.get('product');
+      if (product) {
+        var psel = document.getElementById('product');
+        for (var j = 0; j < psel.options.length; j++) {
+          if (psel.options[j].value === product) {
+            psel.options[j].selected = true;
             break;
           }
         }
@@ -179,8 +207,8 @@
       var date = formatDate(formData.get('date'));
       var time = formatTime(formData.get('time'));
       var guests = formData.get('guests');
-      var cupSize = formData.get('cupSize');
-      var base = formData.get('base');
+      var productSelect = document.getElementById('product');
+      var productText = productSelect.value ? productSelect.options[productSelect.selectedIndex].text : '';
       var msg = formData.get('message') || '';
 
       var text = 'Hello GurtBase! I have a ' + type + ' inquiry.\n\n';
@@ -188,9 +216,8 @@
       text += 'Date: ' + date + '\n';
       text += 'Time: ' + time + '\n';
       if (guests && guests.trim()) text += 'People: ' + guests + '\n';
-      if (type === 'Pre-order Pickup') {
-        if (cupSize && cupSize.trim()) text += 'Cup Size: ' + cupSize + '\n';
-        if (base && base.trim()) text += 'Base: ' + base + '\n';
+      if (type === 'Pre-order Pickup' && productText) {
+        text += 'Product: ' + productText + '\n';
       }
       if (msg && msg.trim()) text += '\nMessage: ' + msg + '\n';
       return encodeURIComponent(text);
